@@ -63,8 +63,8 @@ compile-toolbar:
 	touch build/toolbar_init.css
 	touch build/toolbar_init.js
 
-	cp bower_components/bootstrap/img/glyphicons-halflings.png build/toolbar-glyphicons-halflings.png
-	cp bower_components/bootstrap/img/glyphicons-halflings-white.png build/toolbar-glyphicons-halflings-white.png
+	#cp bower_components/bootstrap/img/glyphicons-halflings.png build/toolbar-glyphicons-halflings.png
+	#cp bower_components/bootstrap/img/glyphicons-halflings-white.png build/toolbar-glyphicons-halflings-white.png
 	sed -i -e 's@../img/glyphicons-halflings.png@++resource++plone.app.toolbar-glyphicons-halflings.png@g' build/toolbar.min.css
 	sed -i -e 's@../img/glyphicons-halflings-white.png@++resource++plone.app.toolbar-glyphicons-halflings-white.png@g' build/toolbar.min.css
 
@@ -119,10 +119,10 @@ docs:
 	sed -i -e 's@<script src="node_modules/grunt-contrib-less/node_modules/less/dist/less-1.4.1.js"></script>@@g' docs/dev/index.html
 	sed -i -e 's:<style type="text/less">@import "less/docs.less";@isBrowser\: true;</style>:<link rel="stylesheet" type="text/css" href="docs.min.css" />:g' docs/dev/index.html
 
-	cp bower_components/bootstrap/img/glyphicons-halflings.png docs/dev/
-	cp bower_components/bootstrap/img/glyphicons-halflings-white.png docs/dev/
-	sed -i -e 's@../img/glyphicons-halflings.png@glyphicons-halflings.png@g' docs/dev/docs.min.css
-	sed -i -e 's@../img/glyphicons-halflings-white.png@glyphicons-halflings-white.png@g' docs/dev/docs.min.css
+	# cp bower_components/bootstrap/img/glyphicons-halflings.png docs/dev/
+	# cp bower_components/bootstrap/img/glyphicons-halflings-white.png docs/dev/
+	# sed -i -e 's@../img/glyphicons-halflings.png@glyphicons-halflings.png@g' docs/dev/docs.min.css
+	# sed -i -e 's@../img/glyphicons-halflings-white.png@glyphicons-halflings-white.png@g' docs/dev/docs.min.css
 
 	cp bower_components/font-awesome/font/fontawesome-webfont.eot docs/dev
 	cp bower_components/font-awesome/font/fontawesome-webfont.woff docs/dev
