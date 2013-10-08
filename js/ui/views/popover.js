@@ -91,6 +91,7 @@ define([
     show: function(){
       var pos = this.getPosition();
       var $tip = this.$el, tp, placement, actualWidth, actualHeight;
+      var headerOffset = $('header .navbar').height() || 0;
 
       placement = this.placement;
 
@@ -102,6 +103,7 @@ define([
 
       switch (placement) {
         case 'bottom':
+          window.scrollTo(0, pos.top - headerOffset);
           tp = {top: pos.top + pos.height, left: pos.left + pos.width / 2 - actualWidth / 2};
           break;
         case 'top':
